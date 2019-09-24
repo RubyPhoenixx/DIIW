@@ -1,0 +1,67 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 4</title>
+    <link rel="stylesheet" type="text/css" href="../Styles/style4.css">
+</head>
+<body>
+   <form>
+       
+       <!--DATOS IDENTIFICATIVOS-->
+        <fieldset>
+            <legend>Datos identificativos</legend>
+            <label>Código de suscripción:</label><input type="text"><br>
+            <label>NºSocio</label><input type="number"><br>
+            <label>Usuario: </label><input type="text"><br>
+            <label>Constraseña: </label><input type="password"><br>
+            <label>Repite Contraseña: </label><input type="password"><br>
+            <label>Nombre Completo: </label><input type="text"><br>
+            <label>DNI: </label><input type="number"><br>
+            <label>Letra: </label><input type="text"><br>
+            <label>Dirección: </label><input type="text"><br>
+            <label>Ciudad: </label><input type="text"><br>
+            <label>Código Postal: </label><input type="number"><br>
+            <label>País: </label><input type="text"><br>
+        </fieldset>
+        
+        <!--DATOS BANCARIOS-->
+        <fieldset>
+            <legend>Datos Bancarios</legend>
+            <input type=radio name="datos_bancarios" value="Visa">
+            <label>Visa</label> 
+            
+            <input type=radio name="datos_bancarios" value="Master Card" checked>
+            <label>Master Card</label>
+            
+            <input type=radio name="datos_bancarios" value="American Express">
+            <label>American Express</label>
+        </fieldset>
+        
+        <!--AFICIONES-->
+        <fieldset>
+            <legend>Aficiones</legend>
+            <input type="checkbox" nombre="aficiones" value="leer" checked><label>Leer</label>
+            <input type="checkbox" nombre="aficiones" value="viajar" checked><label>Viajar</label>
+            <input type="checkbox" nombre="aficiones" value="escuchar_musica" checked><label>Escuchar Musica</label>
+            <input type="checkbox" nombre="aficiones" value="deportes"><label>Deportes</label>
+            <input type="checkbox" nombre="aficiones" value="montaña"><label>Montaña</label>
+            <input type="checkbox" nombre="aficiones" value="juegos_de_estrategia"><label checked>Juegos de Estrategia</label>
+        </fieldset>
+        
+        <!--ENVIAR INFORMACION-->
+        <fieldset>
+           <legend>Enviar información</legend>
+            <details>
+                <summary>Más opciones</summary>
+                <label>Adjuntar resguardo de pago (PDF): </label>
+                <input type="file">
+            </details>
+            
+            <input type="submit" method="post" value="Enviar">
+            <input type="reset" value="Limpiar">
+        </fieldset>
+        
+        
+    </form>
+</body>
+</html>

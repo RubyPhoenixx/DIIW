@@ -1,0 +1,28 @@
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: 12px;
+    text-align: center;
+}
+
+h1{
+    margin: 30px;
+    margin-bottom: 2px;
+}
+
+div{
+    width: 60%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#mozilla{
+    border: 5px solid orange;  
+}
+#explorer{
+    border: 5px solid blue;
+}
+#chrome{
+    border: 5px solid green;
+}
