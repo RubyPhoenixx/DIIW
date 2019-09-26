@@ -23,7 +23,7 @@
             <label>Nombre Completo: </label>
             <input size="30" maxlength="30" autofocus type="text"><br>
             <label>DNI: </label>
-            <input size="10" maxlength="8" type="number"><br>
+            <input size="10" maxlength="8" type="text"><br>
             <label>Letra: </label>
             <input size="2" maxlength="1" type="text"><br>
             <label>Dirección: </label>
@@ -31,7 +31,7 @@
             <label>Ciudad: </label>
             <input  size="15" maxlength="15" type="text"><br>
             <label>Código Postal: </label>
-            <input size="5" maxlength="5" type="number"><br>
+            <input size="5" maxlength="5" type="text"><br>
             <label>País: </label>
             <input size="7" disabled value="Francia" type="text"><br>
         </fieldset>
@@ -59,12 +59,16 @@
             <input type="checkbox" nombre="aficiones" value="montaña"><label>Montaña</label>
             <input type="checkbox" nombre="aficiones" value="juegos_de_estrategia"><label checked>Juegos de Estrategia</label>
             
-            <input hidden type="checkbox" nombre="aficiones" value="informatica">
-            <label value="Informatica"></label>
-            <input hidden type="checkbox" nombre="aficiones" value="jogging" >
-            <label hidden value="Jogging"></label>
-            <input hidden type="checkbox" nombre="aficiones" value="cine">
-            <label hidden value="Cine"></label>
+           
+            <details>
+                <summary>Más detalles</summary>
+                <input type="checkbox" nombre="aficiones" value="informatica">
+                <label>Informatica</label>
+                <input type="checkbox" nombre="aficiones" value="jogging" >
+                <label>Jogging</label>
+                <input type="checkbox" nombre="aficiones" value="cine">
+                <label>Cine</label>
+                </details>
         </fieldset>
         
         <!--ENVIAR INFORMACION-->
