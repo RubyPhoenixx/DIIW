@@ -23,16 +23,35 @@ hr {
   border-bottom: 1px solid grey;
 }
 
-.uno li{
+/******   1   *****/
+.uno li:first-child{
+  background: lightsteelblue;
+}
+
+/******   2   *****/
+.dos :nth-child(2) :nth-child(3){
   background: lightsteelblue;
 }
 
 .dos{
+    color: red;
+}
+
+.dos::after{
+    content: "Soy posterior al bloque 2.";
+    color: green;
+}
+
+/******   3   *****/
+.tres :nth-child(odd) :nth-child(1),
+.tres :nth-child(odd) :nth-child(2),
+.tres :nth-child(odd) :nth-child(3){
   background: lightsteelblue;
 }
 
-.tres {
-  background: lightsteelblue;
+.tres::before{
+    content: "Soy previo al bloque 3.";
+    color: blue;
 }
 
 
