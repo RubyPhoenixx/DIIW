@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+</head>
+<style>
+    #contenedor{
+        width: 80%;
+        margin-left: 10%;
+        padding: 10px;
+        border-right: 2px solid black;
+        border-left: 2px solid black;
+    }
+</style>
+<body>
+   <div id="contenedor">
+        <header><img id="logo"/></header>
+        <div>
+            <div class="option">
+                <form>
+                    <input type="text" name="usuario_nombre"/>
+                    <input type="password" name="usuario_contraseña"/>
+                    <input id="iniciar_sesion" type="submit" name="submit_iniciar_sesion" value="INICIAR SESION"/>
+                </form>
+            </div>
+            <div class="option">
+                ¿No tienes cuenta? Crea una.
+                <a id="registrarse">REGISTRARSE</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
