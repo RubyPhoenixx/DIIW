@@ -1,64 +1,88 @@
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Ejercicio 2</title>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>NTH-CHILD</title>
-        <meta name="description" content="Uso nth-child.">
-        <link rel="stylesheet" href="Ejercicio2.css">
-    </head>
-    <body>
-
-<div class="uno">
-  <ul>
-    <li>Uno</li>
-    <li>Dos</li>
-    <li>Tres</li>
-    <li>Cuatro</li>
-  </ul>
-  <ol>
-    <li>Cinco</li>
-    <li>Seis</li>  
-    <li>Siete</li>
-    <li>Ocho</li>
-  </ol>
-  <i>Selecciona los elementos &lt;li&gt; que sean los primeros hijos de sus padres. </i>
-</div>
-
-<div class="dos">
-  <ul>
-    <li>Uno</li>
-    <li>Dos</li>
-    <li>Tres</li>
-    <li>Cuatro</li>
-  </ul>
-  <ol>
-    <li>Cinco</li>
-    <li>Seis</li>
-    <li>Siete</li>
-    <li>Ocho</li>
-  </ol>
-  <i>Selecciona el tercer hijo del segundo elemento.</i>
-</div>
-
-<div class="tres">
-  <ul>
-    <li>Uno</li>
-    <li>Dos</li>
-    <li>Tres</li>
-    <li>Cuatro</li>
-  </ul>
-  <ol>
-    <li>Cinco</li>
-    <li>Seis</li>
-    <li>Siete</li>
-    <li>Ocho</li>
-  </ol>
-  <ul>
-    <li>Nueve</li>
-    <li>Diez</li>
-    <li>Once</li>
-    <li>Doce</li>
-  </ul>
-  <i>Selecciona los 3 primeros elementos &lt;li&gt; dentro de los elementos impares.</i>
-</div>
-
+         <link rel="stylesheet" type="text/css" href="css/ejercicio2.css">
+	</head>
+	<style>
+        h1,h2,h3{
+            color: grey;
+        }
+        
+        p{
+            color: blue;
+        }
+        p:nth-child(5){
+            color: red;
+        }
+        
+        em{
+            color: yellow;
+        }
+        
+        span{
+            color: green;
+        }
+    </style>
+	<body>
+		<h1>Titulares de mi periódico</h1>
+		<h2>Noticias políticas</h2>
+		
+		<!------TITULAR 1------>
+		<h3>Titular 1</h3>
+		<p><strong>Nulla facilisi. Duis at tincidunt erat, <span>vel fringilla nisi.</span> Donec ultrices purus eget rhoncus condimentum. 
+		Etiam sit amet eros eu turpis sagittis dictum. Ut aliquam sapien id pulvinar ultricies. 
+		Vivamus gravida turpis erat, imperdiet dignissim lacus blandit at. Cras sed ante ac velit ultricies posuere.</strong></p>
+		
+		<p>Sed a augue eu justo faucibus cursus id a eros. <em>In luctus ligula nec lorem vehicula sagittis</em>. 
+		Maecenas enim metus, vehicula et dignissim sit amet, ullamcorper pretium orci. 
+		Vestibulum ullamcorper suscipit velit ac dictum. Integer mattis hendrerit diam, sit amet consequat leo tempor quis. 
+		Sed sem neque, hendrerit vel pellentesque vel, pretium non tortor. Nunc egestas magna erat, 
+		quis accumsan metus sagittis at. <span>Aliquam elementum purus eget rhoncus auctor.</span> Duis tristique faucibus feugiat. 
+		Praesent velit orci, pulvinar pretium tellus in, fermentum malesuada dui. Proin maximus, justo ac malesuada porta, 
+		turpis felis iaculis est, interdum aliquet ex ante eu ex. Vivamus feugiat vehicula malesuada. 
+		Vivamus et justo elementum, euismod nunc congue, mollis mi. Pellentesque convallis varius vestibulum. 
+		Nam auctor ex est, <em>eget faucibus nisl tempus id</em>. Vestibulum a mauris commodo, <em>hendrerit neque semper</em>, porttitor sem.</p>
+		
+		<!------TITULAR 2------>
+		<h3>Titular 2</h3>
+		<p><strong>Nulla facilisi. Duis at tincidunt erat, vel fringilla nisi. Donec ultrices purus eget rhoncus condimentum. 
+		Etiam sit amet eros eu turpis sagittis dictum. Ut aliquam sapien id pulvinar ultricies. Vivamus gravida turpis erat, imperdiet dignissim lacus blandit at. 
+		Cras sed ante ac velit ultricies posuere.</strong></p>
+		<p class="azul">Sed a augue eu justo faucibus cursus id a eros. <em>In luctus ligula nec lorem vehicula sagittis</em>. 
+		Maecenas enim metus, vehicula et dignissim sit amet, ullamcorper pretium orci. Vestibulum ullamcorper suscipit velit ac dictum. 
+		Integer mattis hendrerit diam, sit amet consequat leo tempor quis. Sed sem neque, hendrerit vel pellentesque vel, pretium non tortor. 
+		Nunc egestas magna erat, quis accumsan metus sagittis at. Aliquam elementum purus eget rhoncus auctor. 
+		Duis tristique faucibus feugiat. Praesent velit orci, pulvinar pretium tellus in, fermentum malesuada dui. Proin maximus, 
+		justo ac malesuada porta, turpis felis iaculis est, interdum aliquet ex ante eu ex. Vivamus feugiat vehicula malesuada. 
+		Vivamus et justo elementum, euismod nunc congue, mollis mi. Pellentesque convallis varius vestibulum. Nam auctor ex est, <em>eget faucibus nisl tempus id</em>. 
+		Vestibulum a mauris commodo, <em>hendrerit neque semper</em>, porttitor sem.</p>
+		<h2>Noticias políticas</h2>
+		<h3>Titular 3</h3>
+		<p><strong>Nulla facilisi. Duis at tincidunt erat, vel fringilla nisi. Donec ultrices purus eget rhoncus condimentum. 
+		Etiam sit amet eros eu turpis sagittis dictum. Ut aliquam sapien id pulvinar ultricies. Vivamus gravida turpis erat, imperdiet dignissim lacus blandit at. 
+		Cras sed ante ac velit ultricies posuere.</strong></p>
+		<p>Sed a augue eu justo faucibus cursus id a eros. <em>In luctus ligula nec lorem vehicula sagittis</em>. 
+		Maecenas enim metus, vehicula et dignissim sit amet, ullamcorper pretium orci. Vestibulum ullamcorper suscipit velit ac dictum. 
+		Integer mattis hendrerit diam, sit amet consequat leo tempor quis. Sed sem neque, hendrerit vel pellentesque vel, pretium non tortor. 
+		Nunc egestas magna erat, quis accumsan metus sagittis at. Aliquam elementum purus eget rhoncus auctor. 
+		Duis tristique faucibus feugiat. Praesent velit orci, pulvinar pretium tellus in, fermentum malesuada dui. 
+		Proin maximus, justo ac malesuada porta, turpis felis iaculis est, interdum aliquet ex ante eu ex. Vivamus feugiat vehicula malesuada. 
+		Vivamus et justo elementum, euismod nunc congue, mollis mi. Pellentesque convallis varius vestibulum. Nam auctor ex est, <em>eget faucibus nisl tempus id</em>. 
+		Vestibulum a mauris commodo, <em>hendrerit neque semper</em>, porttitor sem.</p>
+		<h3>Titular 4</h3>
+		<p><strong>Nulla facilisi. Duis at tincidunt erat, vel fringilla nisi. Donec ultrices purus eget rhoncus condimentum. 
+		Etiam sit amet eros eu turpis sagittis dictum. Ut aliquam sapien id pulvinar ultricies. Vivamus gravida turpis erat, imperdiet dignissim lacus blandit at. 
+		Cras sed ante ac velit ultricies posuere.</strong></p>
+		<p>Sed a augue eu justo faucibus cursus id a eros. <em>In luctus ligula nec lorem vehicula sagittis</em>. 
+		Maecenas enim metus, vehicula et dignissim sit amet, ullamcorper pretium orci. Vestibulum ullamcorper suscipit velit ac dictum. 
+		Integer mattis hendrerit diam, sit amet consequat leo tempor quis. Sed sem neque, hendrerit vel pellentesque vel, pretium non tortor. 
+		Nunc egestas magna erat, quis accumsan metus sagittis at. Aliquam elementum purus eget rhoncus auctor. 
+		Duis tristique faucibus feugiat. Praesent velit orci, pulvinar pretium tellus in, fermentum malesuada dui. 
+		Proin maximus, justo ac malesuada porta, turpis felis iaculis est, interdum aliquet ex ante eu ex. Vivamus feugiat vehicula malesuada. 
+		Vivamus et justo elementum, euismod nunc congue, mollis mi. Pellentesque convallis varius vestibulum. Nam auctor ex est, <em>eget faucibus nisl tempus id</em>. 
+		Vestibulum a mauris commodo, <em>hendrerit neque semper</em>, porttitor sem.</p>
+		<h4>El periódico</h4>
+	</body>
+</html>
