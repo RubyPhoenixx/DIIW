@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selects dependientes JavaScript</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+   <header>PAGINA PRINCIPAL</header>
+    <!------------- HEADER ------------>
+    <nav>
+        <ul>
+            <li><a href="">PROMOCIONES</a></li>
+            <li><a href="">GENERALES</a></li>
+            <li><a href="">HABILIDADES</a></li>
+        </ul>
+    </nav>
+       
+    <!------------- FIELDSET ------------>
+    <fieldset>
+        <legend>SELECCIÓN DE GENERALES</legend>
+
+        <select id="eleccion1" name="eleccion1">
+            <option value="calidad">Por calidad</option>
+            <option value="tipo">Por tipo</option>
+            <option value="tropa">Por tropa</option>
+        </select>
+
+        <select id="eleccion2" name="eleccion2">
+            <option class="seleccionado" eleccion="tipo" value="tipo">Elige tipo de general</option>
+            <option eleccion="tipo" value="Ataque">Ataque</option>
+            <option eleccion="tipo" value="Defensa">Defensa</option>
+            <option eleccion="tipo" value="Recursos">Recursos</option>
+            <option eleccion="tipo" value="Logistica">Logistica</option>        
+            
+            <option class="seleccionado" eleccion="calidad" value="calidad">Elige calidad de general</option>
+            <option eleccion="calidad" value="5">**5**</option>
+            <option eleccion="calidad" value="4">**4**</option>
+            <option eleccion="calidad" value="3">**3**</option>
+            <option eleccion="calidad" value="2">**2**</option>
+      
+            <option class="seleccionado" eleccion="tropa" value="tropa">Elige tipo de tropa</option>
+            <option eleccion="tropa" value="Magmasaurus">Magmasaurus</option>
+            <option eleccion="tropa" value="Tritones">Tritones</option>
+            <option eleccion="tropa" value="Vermis vengadores">Vermis vengadores</option>
+            <option eleccion="tropa" value="Espejos de fuego">Espejos de fuego</option>
+        </select>
+    </fieldset>
+    
+
+    
+    <fieldset>
+        <a href="" class="generales" nombre="Khani" tipo="Ataque" calidad="5" tropa="Magmasaurus">Khani</a>,
+        <a href="" class="generales" nombre="Kanovia" tipo="Ataque" calidad="5" tropa="Vermis vengadores">Kanovia</a>,
+        <a href="" class="generales" nombre="Nova" tipo="Ataque" calidad="5" tropa="Espejos de fuego">Nova</a>,
+        <a href="" class="generales" nombre="Meridia" tipo="Ataque" calidad="5" tropa="Tritones">Meridia</a>,
+        <a href="" class="generales" nombre="Pagrio" tipo="Defensa" calidad="5" tropa="Tritones">Pagrio</a>,
+        <a href="" class="generales" nombre="Drimax" tipo="Defensa" calidad="5" tropa="Magmasaurus">Drimax</a>,
+        <a href="" href="general.html" class="generales" nombre="Dreon" tipo="Ataque" calidad="4" tropa="Magmasaurus">Dreon</a>,
+        <a href="" class="generales" nombre="Tisiphone" tipo="Logistica" calidad="5" tropa="">Tisiphone</a>,
+        <a href="" class="generales" nombre="Gralix" tipo="Recursos" calidad="5" tropa="">Gralix</a>,
+        <a href="" class="generales" nombre="Chabrio" tipo="Recursos" calidad="3" tropa="">Chabrio</a>,
+        <a href="" class="generales" nombre="Wingrus" tipo="Logistica" calidad="2" tropa="">Wingrus</a>,
+        <a href="" class="generales" nombre="Emeranthe" tipo="Defensa" calidad="3" tropa="Tritones">Emeranthe</a>
+    </fieldset>
+    
+
+
+
+    <script type="text/javascript">
+    
+        // Consigue el elemento provincias/poblaciones por su identificador id. Es un método del DOM de HTML
+        var eleccion1 = document.getElementById("eleccion1");
+        var eleccion2 = document.getElementById("eleccion2");
+        
+        // Añade un evento change al elemento id1, asociado a la función cambiarEleccion()
+        if (eleccion1.addEventListener) {     // Para la mayoría de los navegadores, excepto IE 8 y anteriores
+            eleccion1.addEventListener("change", cambiarEleccion);
+        } else if (eleccion1.attachEvent) {   // Para IE 8 y anteriores
+            eleccion1.attachEvent("change", cambiarEleccion); // attachEvent() es el método equivalente a addEventListener()
+        }
+
+        // Definición de la función cambiarEleccion()
+        function cambiarEleccion() {
+            for (var i = 0; i < eleccion2.options.length; i++)
+            
+            // -- Inicio del comentario -- 
+            // Muestra solamente las elecciones que sean iguales a los eleccion1 seleccionados, según la propiedad display
+            if(eleccion2.options[i].getAttribute("eleccion") == eleccion1.value){
+                eleccion2.options[i].style.display = "block";
+            }else{
+                eleccion2.options[i].style.display = "none";
+            }
+            // -- Fin del comentario --
+            
+            eleccion2.value = eleccion1.value;
+        }
+
+        // Llamada a la función cambiar()
+        cambiarEleccion();
+
+
+        //---------------------------------------------------------------------------------------------------
+        //---------------------- MOSTRAR GENERALES SEGÚN EL FILTRO SELECCIONADO -----------------------------
+        //---------------------------------------------------------------------------------------------------
+
+        var generales = document.getElementsByClassName("generales");
+
+        if (eleccion2.addEventListener) {     // Para la mayoría de los navegadores, excepto IE 8 y anteriores
+            eleccion2.addEventListener("change", mostrarGenerales);
+        } else if (eleccion2.attachEvent) {   // Para IE 8 y anteriores
+            eleccion2.attachEvent("change", mostrarGenerales); // attachEvent() es el método equivalente a addEventListener()
+        }
+
+
+        function mostrarGenerales() {
+            
+            for (var i = 0; i < generales.length; i++){
+                // Muestra solamente las elecciones que sean iguales a los eleccion1 seleccionados, según la propiedad display
+                if(generales[i].getAttribute(eleccion1.value) == eleccion2.value){
+                    generales[i].style.display = "block";
+                }else{
+                    generales[i].style.display = "none";
+                }
+            }
+            
+        }
+
+    </script>
+    
+</body>
+
+</html>
