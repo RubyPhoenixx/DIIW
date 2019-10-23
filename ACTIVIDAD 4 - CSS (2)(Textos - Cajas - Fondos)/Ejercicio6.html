@@ -1,0 +1,63 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 6</title>
+</head>
+<style>
+    #contenedor{
+        background-color: lightcyan;
+        width: 620px;
+        height: 600px;
+        margin: auto;
+        margin-top: 50px;
+        
+        position: relative;
+    }
+    
+    /*---- EFECTOS ----*/
+    #texto1{
+        color: #ff00ff;
+        width: 70px;
+        
+        font-family: Arial;
+        
+        z-index: 1;
+        position: absolute;
+        top: 230px;
+        left: 40px;
+    }
+    
+    /*---- HOJAS ----*/
+    #texto2{
+        color: red;
+        width: 90px;
+        
+        font-family: Arial;
+        
+        z-index: 2;
+        position: absolute;
+        top: 255px;
+        left: 40px;
+    }
+    
+    /*---- CSS ----*/
+    #texto3{
+        width: 350px;
+        color: blue;
+        background-color: lightgrey;
+        font-family: Algerian;
+        
+        z-index: 3;
+        position: absolute;
+        top: ;
+    }
+</style>
+<body>
+    <div id="contenedor">
+        <h2>DIV CONTENEDOR</h2>
+        <div id="texto1">efectos en capas</div>
+        <div id="texto2">hojas de estilo</div>
+        <div id="texto3">CSS</div>
+    </div>
+</body>
+</html>
