@@ -1,0 +1,67 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar</title>
+</head>
+
+<style>
+    input[type="checkbox"] {
+        display: none;
+    }
+    
+    input[type="checkbox"] + label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 4px;
+        border: 1px solid black;
+    }
+    
+    #Oca{
+        background: url(Images/Oca.png);
+    }
+    
+    #Buho{
+        background: url(Images/buho.png);
+    }
+    
+    #Canario{
+        background: url(Images/Canario.png);
+    }
+    
+    #PavoReal{
+        background: url(Images/PavoReal.png);
+    }
+    
+    input[type="checkbox"]:checked + label {
+        padding: 0px;
+        border: 5px solid black;
+    }
+    
+</style>
+<body>
+    <!-- TITULO -->
+    <header></header>
+    
+    <!-- CUADRO DE BUSQUEDA -->
+    <div id='cuadroBusqueda'>
+        <fieldset>
+            <legend>Buscar animales</legend>
+            
+            <input type="checkbox" id="1"/>
+            <label id="Oca" for="1"></label>
+            
+            <input type="checkbox" id="2"/>
+            <label id="Buho" for="2"></label>
+            
+            <input type="checkbox" id="3"/>
+            <label id="Canario" for="3"></label>
+            
+            <input type="checkbox" id="4"/>
+            <label id="PavoReal" for="4"></label>
+            
+        </fieldset>
+    </div>
+    
+</body>
+</html>
